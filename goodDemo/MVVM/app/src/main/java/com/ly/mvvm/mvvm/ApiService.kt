@@ -1,5 +1,7 @@
-package com.ly.mvvm
+package com.ly.mvvm.mvvm
 
+import com.ly.mvvm.mvvm.bean.BaseResponse
+import com.ly.mvvm.mvvm.bean.WCategory
 import io.reactivex.Single
 import retrofit2.http.GET
 

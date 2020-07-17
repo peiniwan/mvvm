@@ -1,4 +1,4 @@
-package com.ly.mvvm
+package com.ly.mvvm.mvvm.bean
 
 
 data class Category(var catename: String?, var value: Int? = null, var count: Int? = null) {

@@ -1,4 +1,4 @@
-package com.ly.mvvm.koin
+package com.ly.mvvm.mvp
 
 import android.widget.Toast
 import com.ly.mvvm.MyApp

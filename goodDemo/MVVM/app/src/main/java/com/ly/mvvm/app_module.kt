@@ -1,8 +1,11 @@
 package com.ly.mvvm
 
-import com.ly.mvvm.koin.HelloRepository
-import com.ly.mvvm.koin.HelloRepositoryImpl
-import com.ly.mvvm.koin.MySimplePresenter
+import com.ly.mvvm.mvp.HelloRepository
+import com.ly.mvvm.mvp.HelloRepositoryImpl
+import com.ly.mvvm.mvp.MySimplePresenter
+import com.ly.mvvm.mvvm.ApiService
+import com.ly.mvvm.mvvm.MainViewModel
+import com.ly.mvvm.mvvm.Repository
 import org.koin.android.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.module
 import retrofit2.Retrofit
@@ -13,7 +16,7 @@ val demoModule = module {
     // single instance of HelloRepository
     single<HelloRepository> { HelloRepositoryImpl() }
     // Simple Presenter Factory
-    factory { MySimplePresenter(get()) }
+    factory { MySimplePresenter(get()) }   //这调用
 }
 
 val viewModelModule = module {
@@ -35,7 +38,8 @@ val remoteModule = module {
             .build()
     }
 
-    single<ApiService> { get<Retrofit>().create(ApiService::class.java) }
+    single<ApiService> { get<Retrofit>().create(
+        ApiService::class.java) }
 }
 
 

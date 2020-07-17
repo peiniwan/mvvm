@@ -1,4 +1,4 @@
-package com.ly.mvvm.koin
+package com.ly.mvvm.mvp
 
 interface HelloRepository {
     fun giveHello(): String

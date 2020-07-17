@@ -1,4 +1,6 @@
-package com.ly.mvvm
+package com.ly.mvvm.mvvm
+
+import com.ly.mvvm.mvvm.ApiService
 
 class Repository (private val remote: ApiService){
 

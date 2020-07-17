@@ -1,4 +1,4 @@
-package com.ly.mvvm
+package com.ly.mvvm.mvvm.bean
 
 
 open class BaseResponse<T> {
